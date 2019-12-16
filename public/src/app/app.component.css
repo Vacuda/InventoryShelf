@@ -1,0 +1,220 @@
+
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+    /* outline: 1px dotted red; */
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.container {
+    width: 970px;
+    min-height: 800px;
+    margin: 0px auto;
+    padding: 60px;
+    font-size: 15px;
+    background-color: rgb(160, 163, 154);
+}
+
+
+
+.division {
+    background-color: rgb(49, 72, 173);
+    height: 2px;
+    width: 80%;
+    margin: 20px auto 20px auto;
+    box-shadow: 0px 0px 3px darkblue;
+    display: block;
+}
+
+
+button {
+    margin: 0px auto;
+    display: block;
+}
+
+#clickable:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.btn-warning {
+    margin-top: 15px;
+}
+
+.errors {
+    color: red;
+}
+
+
+
+
+
+
+
+h1 {
+    text-align: center;
+    margin-top: 0px;
+}
+
+span {
+    color: rgb(161, 0, 0);
+    display: block;
+}
+
+header p {
+    margin-bottom: 0px;
+    font-size: 10px;
+    text-align: end;
+}
+
+header a {
+    font-size: 18px;
+    display: block;
+    text-align: end;
+}
+
+.th-big {
+    width: 40%;
+    background-color: rgb(82, 82, 82);
+}
+
+.th-medium {
+    width: 20%;
+    background-color: rgb(82, 82, 82);
+}
+
+.th-small {
+    width: 10%;
+    text-align: center;
+    background-color: rgb(82, 82, 82);
+}
+
+.centered {
+    text-align: center;
+}
+
+tr th.bordered {
+    border: 1px solid black;
+}
+
+.btn-delete {
+    width: 30px;
+    height: 20px;
+    font-size: 10px;
+    text-align: center;
+    padding: 0px;
+    line-height: 20px;
+}
+
+.btn-edit {
+    width: 60px;
+    height: 20px;
+    font-size: 10px;
+    text-align: center;
+    padding: 0px;
+    margin: 10px auto;
+    line-height: 20px;
+}
+
+.btn-complete {
+    text-align: center;
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 23px;
+    background-color: rgb(82, 82, 82);
+    font-weight: bold;
+    color: black;
+    box-shadow: 2px 2px 3px black;
+    /* margin-top: 20px; */
+}
+
+.btn-add:hover{
+    color: white;
+}
+
+table {
+    overflow: hidden;
+}
+
+.table-backplate {
+    height: 400px;
+    display: block;
+    background-color: whitesmoke;
+}
+
+.length {
+    width: 300px;
+}
+
+
+/* EXAM SPECIFIC  */
+
+
+.squeeze {
+    width: 80%;
+    margin: 0px auto;
+
+}
+
+.midbutton {
+    margin: 0px auto;
+    display: block;
+    width: 200px;
+}
+
+.desc {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 480px) {
+
+ 
+    
+}
+    
+@media only screen and (min-width: 481px) {
+
+
+
+}
+    
+@media only screen and (min-width: 1024px) {
+
+
+
+}
