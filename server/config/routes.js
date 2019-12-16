@@ -1,13 +1,16 @@
-const #### = require('../controllers/####');
+const products = require('../controllers/products');
+const keymaps = require('../controllers/keymaps');
 
 module.exports = (app) => {
 
-    app.get('/api/tasks', (req, res)                    => tasks.all(req, res));
-    app.get('/api/task/:id', (req, res)                 => tasks.show(req, res));
-    app.post('/api/task/create', (req, res)             => tasks.create(req, res));
-    app.put('/api/task/update/:id', (req, res)          => tasks.update(req, res));
-    app.delete('/api/task/destroy/:id', (req, res)      => tasks.destroy(req, res));
-    app.get('/api/task/complete/:id', (req, res)        => tasks.complete(req, res));
+    app.get('/api/products', (req, res)                    => products.all(req, res));
+    app.get('/api/product/:id', (req, res)                 => products.show(req, res));
+    app.post('/api/product/create', (req, res)             => products.create(req, res));
+    app.put('/api/product/update/:id', (req, res)          => products.update(req, res));
+    app.delete('/api/product/destroy/:id', (req, res)      => products.destroy(req, res));
 
+    app.get('/api/keymap/:id', (req, res)                 => keymaps.show(req, res));
+    app.post('/api/keymap/create', (req, res)             => keymaps.create(req, res));
+    app.put('/api/keymap/update/:id', (req, res)          => keymaps.update(req, res));
 
 }
