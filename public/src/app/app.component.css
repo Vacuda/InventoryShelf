@@ -1,4 +1,18 @@
 
+/* 
+#F9A03F - neon carrot
+#F7D488 - mellow yellow
+#EAEFB1 - pale goldenrod
+#E9F7CA - nyanza
+#CEB5A7 - dark vanilla
+*/
+
+.inner {
+    width: 100%;
+    height: 700px;
+    padding: 20px;
+}
+
 
 * {
     margin: 0;
@@ -7,21 +21,79 @@
     vertical-align: top;
     /* outline: 1px dotted red; */
     color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif */
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 .container {
-    width: 970px;
-    min-height: 800px;
+    width: 960px;
+    height: 800px;
     margin: 0px auto;
-    padding: 60px;
     font-size: 15px;
-    background-color: rgb(160, 163, 154);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    /* font-weight: bold; */
+    padding: 0px;
+    /* background-color: #CEB5A7; */
+    background-image: radial-gradient(#E9F7CA, #CEB5A7 40%)
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    padding: 0px;
+    font-weight: bold;
+    /* border-left: 1px solid black;
+    border-right: 1px solid black; */
+    border-bottom: 1px solid black;
+    display: block;
+    background-image: linear-gradient(to bottom, white, #CEB5A7);
+}
+
+button {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 60px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 3px;
+    width: 120px;
+    height: 60px;
+}
+
+.navbuttons {
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(41, 41, 41);
+    background-image: radial-gradient(#F7D488, #F9A03F)
+}
+
+.navbuttons:hover {
+    color: black;
+    text-shadow: 2px 1px 2px rgb(255, 231, 180);
 }
 
 
 
-.division {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .division {
     background-color: rgb(49, 72, 173);
     height: 2px;
     width: 80%;
@@ -130,7 +202,6 @@ tr th.bordered {
     font-weight: bold;
     color: black;
     box-shadow: 2px 2px 3px black;
-    /* margin-top: 20px; */
 }
 
 .btn-add:hover{
@@ -149,13 +220,13 @@ table {
 
 .length {
     width: 300px;
-}
+} */
 
 
 /* EXAM SPECIFIC  */
 
 
-.squeeze {
+/* .squeeze {
     width: 80%;
     margin: 0px auto;
 
@@ -170,7 +241,7 @@ table {
 .desc {
     margin-left: 200px;
     margin-right: 200px;
-}
+} */
 
 
 

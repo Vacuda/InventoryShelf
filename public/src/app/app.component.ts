@@ -17,10 +17,10 @@ export class AppComponent implements OnInit {
     constructor(private _httpService: TaskService){}
 
     ngOnInit(){
-        this.createtask = {
-            title: "",
-            description: ""
-        }
+        // this.createtask = {
+        //     title: "",
+        //     description: ""
+        // }
     }
 
 }

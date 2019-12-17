@@ -1,1 +1,33 @@
-<p>product-page works!</p>
+<div class="inner">
+
+    <button 
+        (click)="openAddProduct()"
+        *ngIf="!create"
+        class="addbutton"
+        >Add Product</button>
+
+    <app-add-product 
+        (EventClose)="closeAddProduct()" 
+        (EventGetProducts)="getProducts()" 
+        *ngIf="create">
+    </app-add-product>
+
+    <table class="table-striped">
+        <tbody>
+            <tr *ngFor="let prod of allproducts">
+                <td class="table-name">{{prod.name}}</td>
+                <td class="table-action">
+                    <button class="btn-edit">Edit</button>
+                </td>
+                <td class="table-action">
+                    <button class="btn-delete">Del</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+   
+    
+
+
+</div>

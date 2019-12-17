@@ -4,34 +4,50 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class TaskService {
-  constructor(private _http: HttpClient) {}
+    constructor(private _http: HttpClient) {}
 
-    getTasks(){
-        return this._http.get('/api/tasks');
+    //products
+
+    getProducts(){
+        return this._http.get('/api/products');
     }
 
-    getOneTask(id){
-        return this._http.get(`/api/task/${id}`);
+    getOneProduct(id){
+        return this._http.get(`/api/product/${id}`);
     }
 
-    createTask(data){
-        return this._http.post('/api/task/create', data);
+    createProduct(data){
+        return this._http.post('/api/product/create', data);
     }
 
-    deleteTask(id){
-        return this._http.delete(`/api/task/destroy/${id}`);
+    deleteProduct(id){
+        return this._http.delete(`/api/product/destroy/${id}`);
     }
 
-    markComplete(id){
-        return this._http.get(`/api/task/complete/${id}`);
+    updateProduct(id, data){
+        return this._http.put(`/api/product/update/${id}`, data);
     }
 
-    updateTask(id, data){
-        return this._http.put(`/api/task/update/${id}`, data);
+    //keymaps
+
+    getOneKeymap(id){
+        return this._http.get(`/api/keymap/${id}`);
     }
+
+    createKeymap(data){
+        return this._http.post('/api/keymap/create', data);
+    }
+
+    updateKeymap(id, data){
+        return this._http.put(`/api/keymap/update/${id}`, data);
+    }
+
+
+    //test
+    // test(){};
 
 
 

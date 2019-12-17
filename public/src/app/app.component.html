@@ -1,11 +1,13 @@
 
 <div class="container">
 
-    <h1>Favourite Authors</h1>
-
-    <div class="division"></div>
-
-    <app-show *ngIf="onetask" [taskToShow]="onetask"></app-show>
+    <header>
+        <button [routerLink]="['/pos']" class="navbuttons">POS</button>
+        <button [routerLink]="['/inventory']" class="navbuttons">INVENTORY</button>
+        <button [routerLink]="['/receive']" class="navbuttons">RECEIVE</button>
+        <button [routerLink]="['/product']" class="navbuttons">PRODUCT</button>
+        <button [routerLink]="['/keymap']" class="navbuttons">KEYMAP</button>
+    </header>
 
     <router-outlet></router-outlet>
 
@@ -13,6 +15,8 @@
 
 
 <!-- 
+
+    <app-show *ngIf="onetask" [taskToShow]="onetask"></app-show>
 
     <button [routerLink]="['/alpha']">Load Alpha</button>
     <a [routerLink] = "['details', 5]"> Go to /products/details/5 </a> 

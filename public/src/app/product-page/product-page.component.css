@@ -1,0 +1,87 @@
+.inner {
+    width: 100%;
+    height: 700px;
+    padding: 20px;
+}
+
+/* button {
+    display: block;
+    margin: 0px auto 20px auto;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 3px;
+    width: 240px;
+    height: 30px;
+} */
+
+.addbutton {
+    display: block;
+    margin: 0px auto 20px auto;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 3px;
+    width: 240px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(41, 41, 41);
+    background-image: radial-gradient(#F7D488, #F9A03F)
+}
+
+.addbutton:hover {
+    color: black;
+    text-shadow: 2px 1px 2px rgb(255, 231, 180);
+}
+
+table {
+    width:100%;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+td {
+    padding-left: 10px;
+}
+
+.table-name {
+    width: 80%;
+}
+
+.table-action {
+    width: 10%;
+}
+
+.btn-edit {
+    color: rgb(27, 27, 27);
+    display: block;
+    margin: 0px auto;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 3px;
+    width: 60px;
+    height: 20px;
+    background-color: rgb(116, 201, 109);
+    line-height: 18px;
+}
+
+.btn-delete {
+    color: rgb(218, 218, 218);
+    /* color: rgb(65, 65, 65); */
+    display: block;
+    margin: 0px auto;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 3px;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(228, 89, 89);
+    line-height: 18px;
+}
