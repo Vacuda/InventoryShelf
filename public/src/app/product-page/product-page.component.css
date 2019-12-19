@@ -44,10 +44,13 @@ table {
 }
 
 td {
-    padding-left: 10px;
+    height: 28px;
+    border: 1px dashed rgb(66, 66, 66);
 }
 
+
 .table-name {
+    padding-left: 10px;
     width: 80%;
 }
 
@@ -72,7 +75,6 @@ td {
 
 .btn-delete {
     color: rgb(218, 218, 218);
-    /* color: rgb(65, 65, 65); */
     display: block;
     margin: 0px auto;
     border-top: 0px;
@@ -80,7 +82,7 @@ td {
     border-bottom: 1px solid black;
     border-right: 1px solid black;
     border-radius: 3px;
-    width: 40px;
+    width: 36px;
     height: 20px;
     background-color: rgb(228, 89, 89);
     line-height: 18px;

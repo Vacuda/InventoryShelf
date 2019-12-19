@@ -15,6 +15,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AddProductComponent } from './product-page/add-product/add-product.component';
+import { KeymapButtonComponent } from './keymap-page/keymap-button/keymap-button.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AddProductComponent } from './product-page/add-product/add-product.comp
     ProductPageComponent,
     HomePageComponent,
     PageNotFoundComponent,
-    AddProductComponent
+    AddProductComponent,
+    KeymapButtonComponent
   ],
   imports: [
     BrowserModule,

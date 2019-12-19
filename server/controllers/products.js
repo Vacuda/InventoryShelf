@@ -18,6 +18,12 @@ module.exports = {
             .catch(err => res.json({errors: err.errors}));
     },
 
+    showbyname: (req, res) => {
+        Products.findOne({name: req.params.name})
+            .then(results => {res.json({results: results});})
+            .catch(err => res.json({errors: err.errors}));
+    },
+
     create: (req, res) => {    
         Products.create(req.body)
             .then(results => {res.json({results: results});})

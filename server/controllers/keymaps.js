@@ -13,13 +13,13 @@ module.exports = {
     },
 
     show: (req, res) => {
-        Keymaps.findById(req.params.id)
+        Keymaps.findOne({})
             .then(results => {res.json({results: results});})
             .catch(err => res.json({errors: err.errors}));
     },
 
-    create: (req, res) => {    
-        Keymaps.create(req.body)
+    create: (req, res) => {   
+        Keymaps.create({})
             .then(results => {res.json({results: results});})
             .catch(err => res.json({errors: err.errors}));
     },

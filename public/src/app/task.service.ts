@@ -19,6 +19,10 @@ export class TaskService {
         return this._http.get(`/api/product/${id}`);
     }
 
+    getOneProductByName(name){
+        return this._http.get(`/api/product/byname/${name}`);
+    }
+
     createProduct(data){
         return this._http.post('/api/product/create', data);
     }
@@ -33,12 +37,12 @@ export class TaskService {
 
     //keymaps
 
-    getOneKeymap(id){
-        return this._http.get(`/api/keymap/${id}`);
+    getOneKeymap(){
+        return this._http.get(`/api/onekeymap`);
     }
 
-    createKeymap(data){
-        return this._http.post('/api/keymap/create', data);
+    createKeymap(){
+        return this._http.get('/api/keymap/create');
     }
 
     updateKeymap(id, data){

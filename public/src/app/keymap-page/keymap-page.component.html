@@ -1,3 +1,239 @@
 <div class="inner">
-    <p>keymap-page works!</p>
+
+    <div class="full">
+        <form (submit)="updateKeymap()">
+
+        <div class="leftside">
+            <button class="btn btn-warning" type="submit">Save Keymap</button>
+            <!-- <p>-{{keymap | json}}-</p>
+            <p>Name-{{keymap.A1.name}}-</p>
+            <p>Price-{{keymap.A1.price}}-</p>
+            <p>URL-{{keymap.A1.imageurl}}-</p>
+            <p>Envy-{{envy}}-</p> -->
+
+        
+        </div>
+        <div class="rightside">
+
+            <div class="row">
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.A1" (click)="Hide($event.target)"></app-keymap-button>
+                    <select name="keymap.A1.name" [(ngModel)]="keymap.A1.name" (change)="onSelectChange($event.target.value, keymap.A1)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.A2"></app-keymap-button>
+                    <select name="keymap.A2.name" [(ngModel)]="keymap.A2.name" (change)="onSelectChange($event.target.value, keymap.A2)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.A3"></app-keymap-button>
+                    <select name="keymap.A3.name" [(ngModel)]="keymap.A3.name" (change)="onSelectChange($event.target.value, keymap.A3)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.A4"></app-keymap-button>
+                    <select name="keymap.A4.name" [(ngModel)]="keymap.A4.name" (change)="onSelectChange($event.target.value, keymap.A4)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.A5"></app-keymap-button>
+                    <select name="keymap.A5.name" [(ngModel)]="keymap.A5.name" (change)="onSelectChange($event.target.value, keymap.A5)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.B1"></app-keymap-button>
+                    <select name="keymap.B1.name" [(ngModel)]="keymap.B1.name" (change)="onSelectChange($event.target.value, keymap.B1)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.B2"></app-keymap-button>
+                    <select name="keymap.B2.name" [(ngModel)]="keymap.B2.name" (change)="onSelectChange($event.target.value, keymap.B2)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.B3"></app-keymap-button>
+                    <select name="keymap.B3.name" [(ngModel)]="keymap.B3.name" (change)="onSelectChange($event.target.value, keymap.B3)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.B4"></app-keymap-button>
+                    <select name="keymap.B4.name" [(ngModel)]="keymap.B4.name" (change)="onSelectChange($event.target.value, keymap.B4)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.B5"></app-keymap-button>
+                    <select name="keymap.B5.name" [(ngModel)]="keymap.B5.name" (change)="onSelectChange($event.target.value, keymap.B5)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.C1"></app-keymap-button>
+                    <select name="keymap.C1.name" [(ngModel)]="keymap.C1.name" (change)="onSelectChange($event.target.value, keymap.C1)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.C2"></app-keymap-button>
+                    <select name="keymap.C2.name" [(ngModel)]="keymap.C2.name" (change)="onSelectChange($event.target.value, keymap.C2)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.C3"></app-keymap-button>
+                    <select name="keymap.C3.name" [(ngModel)]="keymap.C3.name" (change)="onSelectChange($event.target.value, keymap.C3)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.C4"></app-keymap-button>
+                    <select name="keymap.C4.name" [(ngModel)]="keymap.C4.name" (change)="onSelectChange($event.target.value, keymap.C4)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.C5"></app-keymap-button>
+                    <select name="keymap.C5.name" [(ngModel)]="keymap.C5.name" (change)="onSelectChange($event.target.value, keymap.C5)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.D1"></app-keymap-button>
+                    <select name="keymap.D1.name" [(ngModel)]="keymap.D1.name" (change)="onSelectChange($event.target.value, keymap.D1)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.D2"></app-keymap-button>
+                    <select name="keymap.D2.name" [(ngModel)]="keymap.D2.name" (change)="onSelectChange($event.target.value, keymap.D2)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.D3"></app-keymap-button>
+                    <select name="keymap.D3.name" [(ngModel)]="keymap.D3.name" (change)="onSelectChange($event.target.value, keymap.D3)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.D4"></app-keymap-button>
+                    <select name="keymap.D4.name" [(ngModel)]="keymap.D4.name" (change)="onSelectChange($event.target.value, keymap.D4)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+                <div class="col">
+                    <app-keymap-button [grid]="keymap.D5"></app-keymap-button>
+                    <select name="keymap.D5.name" [(ngModel)]="keymap.D5.name" (change)="onSelectChange($event.target.value, keymap.D5)">
+                        <option value="" disabled selected>---</option>
+                        <option 
+                            *ngFor="let prod of allproducts" 
+                            value="{{prod.name}}">{{prod.name}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+                
+        
+        </div>
+        </form>
+
+    </div>
+
 </div>
+
+
+
+
+
+
