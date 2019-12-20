@@ -1,3 +1,56 @@
 <div class="inner">
-    <p>receive-page works!</p>
+
+    <form (submit)="receiveInventory()">
+
+        <table class="table-striped">
+            <thead>
+                <th>Product Name</th>
+                <th>Box Count</th>
+                <th>Boxes Received</th>
+                <th>Total</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let prod of allproducts">
+                    <td class="table-name">- {{prod.name}}</td>
+                    <td class="table-action">
+                        {{prod.boxcount}}
+                    </td>
+                    <td class="table-input">
+                        <input name="receiveinv[prod._id].current" [(ngModel)]="receiveinv[prod._id].current" placeholder="---" type="number">
+                    </td>
+                    <td class="table-action">
+                        {{receiveinv[prod._id].total}} 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="row">
+            <div class="col col-4">
+                <label for="vendor">Vendor:</label>
+                    <input name="receiveinv.vendor" [(ngModel)]="receiveinv.vendor" id="vendor" placeholder="---">
+            </div>
+            <div class="col col-4">
+                <label for="invoice">Invoice Number:</label>
+                    <input name="receiveinv.invoice" [(ngModel)]="receiveinv.invoice" id="invoice" placeholder="---">
+            </div>
+            <div class="col col-4">
+                <label for="delivery_date">Delivery Date:</label>
+                    <input name="receiveinv.delivery_date" [(ngModel)]="receiveinv.delivery_date" id="delivery_date" placeholder="---" type="date">
+            </div>
+        </div>
+
+        <div *ngIf="errors">
+            <h4>Errors:</h4>
+            <ul>
+                <div *ngFor="let item of errors">
+                    <li class="errors">{{item.message}}</li>
+                </div>
+            </ul>
+        </div>
+
+        <button class="receivebutton" type="submit">Receive Inventory</button>
+
+    </form>
+   
 </div>

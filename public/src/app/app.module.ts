@@ -16,6 +16,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AddProductComponent } from './product-page/add-product/add-product.component';
 import { KeymapButtonComponent } from './keymap-page/keymap-button/keymap-button.component';
+import { EditProductComponent } from './product-page/edit-product/edit-product.component';
+import { DeleteProductComponent } from './product-page/delete-product/delete-product.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { KeymapButtonComponent } from './keymap-page/keymap-button/keymap-button
     HomePageComponent,
     PageNotFoundComponent,
     AddProductComponent,
-    KeymapButtonComponent
+    KeymapButtonComponent,
+    EditProductComponent,
+    DeleteProductComponent
   ],
   imports: [
     BrowserModule,

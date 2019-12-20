@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-inventory-page',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InventoryPageComponent implements OnInit {
 
-  constructor() { }
+    allproducts:any;
 
-  ngOnInit() {
-  }
+    constructor(private _httpService: TaskService) { }
+
+    ngOnInit() {
+        this.getProducts();
+    }
+
+        getProducts(){
+        let observable = this._httpService.getProducts()
+        observable.subscribe(data => {
+            this.allproducts = data['results'];
+        });
+    }
 
 }

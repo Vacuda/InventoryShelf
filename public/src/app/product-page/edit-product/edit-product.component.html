@@ -1,0 +1,35 @@
+<div class="inputcontainer">
+
+    <button class="closebutton" (click)="closeEditProduct()">Close</button>
+
+    <div *ngIf="errors">
+        <h4>Errors:</h4>
+        <ul>
+            <div *ngFor="let item of errors">
+                <li class="errors">{{item.message}}</li>
+            </div>
+        </ul>
+    </div>
+
+    <form (submit)="updateProduct()">
+        <div class="form-group">
+            <label for="name">Product Name:</label>
+            <input name="updateproduct.name" [(ngModel)]="updateproduct.name" class="form-control" id="name" placeholder="---">
+        </div>
+        <div class="form-group">
+            <label for="price">Product Price:</label>
+            <input name="updateproduct.price" [(ngModel)]="updateproduct.price" class="form-control" id="price" placeholder="---" type="number">
+        </div>
+        <div class="form-group">
+            <label for="boxcount">Units Per Box:</label>
+            <input name="updateproduct.boxcount" [(ngModel)]="updateproduct.boxcount" class="form-control" id="boxcount" placeholder="---" type="number">
+        </div>
+        <div class="form-group">
+            <label for="imageurl">Image Url:</label>
+            <input name="updateproduct.imageurl" [(ngModel)]="updateproduct.imageurl" class="form-control" id="imageurl" placeholder="---">
+        </div>
+
+        <button class="editbutton" type="submit">Save Changes</button>
+    </form>
+
+</div>

@@ -22,6 +22,14 @@ const ProductSchema = new mongoose.Schema({
         type: Number,
         default: 0,
     },
+    units_sold: { 
+        type: Number,
+        default: 0,
+    },
+    income: { 
+        type: Number,
+        default: 0.00,
+    },
     
 }, {timestamps: true});
 

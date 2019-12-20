@@ -80,18 +80,23 @@ export class KeymapPageComponent implements OnInit {
 
     onSelectChange(name, box){
         var prod:any;
-
-        let observable = this._httpService.getOneProductByName(name)
-        observable.subscribe(data => {
-            prod = data['results'];
-            box.name = prod.name;
-            box.price = prod.price;
-            box.imageurl = prod.imageurl;
-        });
-        
-
-      
-
+        if(name == ""){
+            box.name = "";
+            box.price = null;
+            box.imageurl = "";
+        }
+        else{
+            let observable = this._httpService.getOneProductByName(name)
+            observable.subscribe(data => {
+                prod = data['results'];
+                box.name = prod.name;
+                box.price = prod.price;
+                box.imageurl = prod.imageurl;
+            });
+        }
     }
+
+
+
 
 }

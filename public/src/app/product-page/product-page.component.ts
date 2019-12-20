@@ -14,9 +14,14 @@ export class ProductPageComponent implements OnInit {
 
 
     errors:any;
+
     create:any;
     edit:any;
+    delete:any;
+    hideaddbutton:any;
 
+    edit_product_id:any;
+    delete_product_id:any;
     allproducts:any;
 
     constructor(private _httpService: TaskService) { }
@@ -24,22 +29,52 @@ export class ProductPageComponent implements OnInit {
     ngOnInit() {
         this.getProducts();
         this.create = false;
+        this.edit = false;
+        this.delete = false;
+        this.hideaddbutton = false;
     }
 
     getProducts(){
         let observable = this._httpService.getProducts()
         observable.subscribe(data => {
             this.allproducts = data['results'];
+
+            // for(let prod of this.allproducts){
+        
+            //     prod["units_sold"]=0;
+            //     prod["income"]=0.00;
+
+            // };
         });
     }
 
     openAddProduct(){
         this.create = true;
+        this.hideaddbutton = true;
     }
 
-    closeAddProduct(){
-        this.create = false;
+    openEditProduct(id){
+        this.closeWindow();
+        this.edit = true;
+        this.hideaddbutton = true;
+        this.edit_product_id = id;
     }
+
+    openDeleteProduct(id){
+        this.closeWindow();
+        this.delete = true;
+        this.hideaddbutton = true;
+        this.delete_product_id = id;
+    }
+
+    closeWindow(){
+        this.create = false;
+        this.edit = false;
+        this.delete = false;
+        this.hideaddbutton = false;
+    }
+
+
 
 
 }
