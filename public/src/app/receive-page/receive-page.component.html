@@ -1,6 +1,22 @@
 <div class="inner">
 
-    <form (submit)="receiveInventory()">
+    <!-- Receive Inventory Submitted Window -->
+
+    <div *ngIf="submittedwindow">
+
+        <button class="closebutton" (click)="closeReceivedWindow()">Close</button>
+
+        <div class="row">
+            <div class="col col-4">
+                <h5>Vendor: {{receiveinv.vendor}}</h5>
+            </div>
+            <div class="col col-4">
+                <h5>Invoice Number: {{receiveinv.invoice}}</h5>
+            </div>
+            <div class="col col-4">
+                <h5>Delivery Date: {{receiveinv.delivery_date}}</h5>
+            </div>
+        </div>
 
         <table class="table-striped">
             <thead>
@@ -10,47 +26,84 @@
                 <th>Total</th>
             </thead>
             <tbody>
-                <tr *ngFor="let prod of allproducts">
-                    <td class="table-name">- {{prod.name}}</td>
-                    <td class="table-action">
-                        {{prod.boxcount}}
+                <tr *ngFor="let prod of receiveinv.products | keyvalue">
+
+                    <td class="table-name">
+                        - {{prod.value.name}}
+                    </td>
+                    <td class="table-action" >
+                        
                     </td>
                     <td class="table-input">
-                        <input name="receiveinv[prod._id].current" [(ngModel)]="receiveinv[prod._id].current" placeholder="---" type="number">
+                        {{prod.value.current}}
                     </td>
                     <td class="table-action">
-                        {{receiveinv[prod._id].total}} 
+                        {{prod.value.total}} 
                     </td>
+                    
                 </tr>
             </tbody>
         </table>
+    </div>
 
-        <div class="row">
-            <div class="col col-4">
-                <label for="vendor">Vendor:</label>
-                    <input name="receiveinv.vendor" [(ngModel)]="receiveinv.vendor" id="vendor" placeholder="---">
-            </div>
-            <div class="col col-4">
-                <label for="invoice">Invoice Number:</label>
-                    <input name="receiveinv.invoice" [(ngModel)]="receiveinv.invoice" id="invoice" placeholder="---">
-            </div>
-            <div class="col col-4">
-                <label for="delivery_date">Delivery Date:</label>
-                    <input name="receiveinv.delivery_date" [(ngModel)]="receiveinv.delivery_date" id="delivery_date" placeholder="---" type="date">
-            </div>
-        </div>
+    <!-- Receive Inventory Window -->
 
-        <div *ngIf="errors">
-            <h4>Errors:</h4>
-            <ul>
-                <div *ngFor="let item of errors">
-                    <li class="errors">{{item.message}}</li>
+    <div *ngIf="receivewindow">
+
+        <h4>Hello</h4>
+
+        <form (submit)="receiveInventory()">
+
+            <table class="table-striped">
+                <thead>
+                    <th>Product Name</th>
+                    <th>Box Count</th>
+                    <th>Boxes Received</th>
+                    <th>Total</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let prod of receiveinv.products | keyvalue">
+                        <td class="table-name">- {{prod.value.name}}</td>
+                        <td class="table-action">
+                            {{prod.value.boxcount}}
+                        </td>
+                        <td class="table-input">
+                            <input name="prod.value.current" [(ngModel)]="prod.value.current" placeholder="---" type="number">
+                        </td>
+                        <td class="table-action">
+                            {{prod.value.total}} 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="row">
+                <div class="col col-4">
+                    <label for="vendor">Vendor:</label>
+                        <input name="receiveinv.vendor" [(ngModel)]="receiveinv.vendor" id="vendor" placeholder="---">
                 </div>
-            </ul>
-        </div>
+                <div class="col col-4">
+                    <label for="invoice">Invoice Number:</label>
+                        <input name="receiveinv.invoice" [(ngModel)]="receiveinv.invoice" id="invoice" placeholder="---">
+                </div>
+                <div class="col col-4">
+                    <label for="delivery_date">Delivery Date:</label>
+                        <input name="receiveinv.delivery_date" [(ngModel)]="receiveinv.delivery_date" id="delivery_date" placeholder="---" type="date">
+                </div>
+            </div>
 
-        <button class="receivebutton" type="submit">Receive Inventory</button>
+            <div *ngIf="errors">
+                <h4>Errors:</h4>
+                <ul>
+                    <div *ngFor="let item of errors">
+                        <li class="errors">{{item.message}}</li>
+                    </div>
+                </ul>
+            </div>
 
-    </form>
-   
+            <button class="receivebutton" type="submit">Receive Inventory</button>
+
+        </form>
+
+    </div>
 </div>

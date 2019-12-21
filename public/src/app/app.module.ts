@@ -18,6 +18,7 @@ import { AddProductComponent } from './product-page/add-product/add-product.comp
 import { KeymapButtonComponent } from './keymap-page/keymap-button/keymap-button.component';
 import { EditProductComponent } from './product-page/edit-product/edit-product.component';
 import { DeleteProductComponent } from './product-page/delete-product/delete-product.component';
+import { ReceiveRowComponent } from './receive-page/receive-row/receive-row.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DeleteProductComponent } from './product-page/delete-product/delete-pro
     AddProductComponent,
     KeymapButtonComponent,
     EditProductComponent,
-    DeleteProductComponent
+    DeleteProductComponent,
+    ReceiveRowComponent
   ],
   imports: [
     BrowserModule,
