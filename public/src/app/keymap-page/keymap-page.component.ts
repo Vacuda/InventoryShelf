@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../task.service';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
 
 @Component({
   selector: 'app-keymap-page',
@@ -11,6 +10,7 @@ export class KeymapPageComponent implements OnInit {
 
     keymap:any;
     errors:any;
+    success: any;
     allproducts:any;
     envy:any;
 
@@ -66,7 +66,8 @@ export class KeymapPageComponent implements OnInit {
         let observable = this._httpService.updateKeymap(id, this.keymap)
         observable.subscribe(data => {
             if(data["results"]){
-                
+                this.success = "Changes Saved.";
+                setTimeout(() => this.success=null, 3000);
             }
             else if(data["errors"]){
                 this.errors = [];

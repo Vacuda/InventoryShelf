@@ -1,3 +1,101 @@
 <div class="inner">
-    <p>pos-page works!</p>
+
+    <div class="full">
+
+        <div class="leftside">
+
+            <div class="orderbox">
+                <div class="row top">
+                    <div class="col col-12">
+                        <p *ngFor="let item of order">{{item.name}} - ${{item.price}}</p>
+                    </div>
+                </div>
+                <div class="row bot">
+                    <div class="col col-12">
+                        <h6>${{total}}</h6>
+                    </div>
+                </div>
+            </div>
+
+            <button class="clearbutton" (click)="clearOrder()">Clear</button>
+            <button class="purchasebutton" (click)="clearOrder()">Purchase</button>
+
+
+        </div>
+        <div class="rightside">
+
+            <div class="row">
+                <div class="col" (click)="addToOrder(keymap.A1)">
+                    <app-keymap-button [grid]="keymap.A1"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.A2)">
+                    <app-keymap-button [grid]="keymap.A2"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.A3)">
+                    <app-keymap-button [grid]="keymap.A3"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.A4)">
+                    <app-keymap-button [grid]="keymap.A4"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.A5)">
+                    <app-keymap-button [grid]="keymap.A5"></app-keymap-button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" (click)="addToOrder(keymap.B1)">
+                    <app-keymap-button [grid]="keymap.B1"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.B2)">
+                    <app-keymap-button [grid]="keymap.B2"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.B3)">
+                    <app-keymap-button [grid]="keymap.B3"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.B4)">
+                    <app-keymap-button [grid]="keymap.B4"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.B5)">
+                    <app-keymap-button [grid]="keymap.B5"></app-keymap-button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" (click)="addToOrder(keymap.C1)">
+                    <app-keymap-button [grid]="keymap.C1"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.C2)">
+                    <app-keymap-button [grid]="keymap.C2"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.C3)">
+                    <app-keymap-button [grid]="keymap.C3"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.C4)">
+                    <app-keymap-button [grid]="keymap.C4"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.C5)">
+                    <app-keymap-button [grid]="keymap.C5"></app-keymap-button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" (click)="addToOrder(keymap.D1)">
+                    <app-keymap-button [grid]="keymap.D1"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.D2)">
+                    <app-keymap-button [grid]="keymap.D2"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.D3)">
+                    <app-keymap-button [grid]="keymap.D3"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.D4)">
+                    <app-keymap-button [grid]="keymap.D4"></app-keymap-button>
+                </div>
+                <div class="col" (click)="addToOrder(keymap.D5)">
+                    <app-keymap-button [grid]="keymap.D5"></app-keymap-button>
+                </div>
+            </div>
+                
+        
+        </div>
+
+    </div>
+
 </div>

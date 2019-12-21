@@ -8,10 +8,17 @@
 .leftside {
     width: 268px;
     height: 100%;
-    margin: 0px;
+    margin: 0px 0px 0px -20px;
     font-size: 14px;
+    text-align: center;
     display: inline-block;
+    vertical-align: top;
     /* outline: 1px dotted red; */
+}
+
+.success {
+    color: rgb(182, 69, 69);
+    text-align: center;
 }
 
 .rightside {
@@ -89,6 +96,9 @@ button {
 .savebutton {
     font-weight: bold;
     font-size: 18px;
+    width: 150px;
+    height: 30px;
+    margin: 20px auto 20px auto;
     color: rgb(41, 41, 41);
     background-image: radial-gradient(#F7D488, #F9A03F)
 }
@@ -97,6 +107,10 @@ button {
     color: black;
     text-shadow: 2px 1px 2px rgb(255, 231, 180);
 }
+
+/* * {
+    outline: 1px dashed red;
+} */
 
 
 
