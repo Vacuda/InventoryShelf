@@ -52,7 +52,6 @@ export class PosPageComponent implements OnInit {
     }
 
     clearOrder(){
-        console.log("did it?")
         this.total = 0.00;
         this.total.toFixed(2);
         this.order = [];
@@ -63,6 +62,34 @@ export class PosPageComponent implements OnInit {
         // this.total = +(this.total.toFixed(2));
         this.total = +(Number(this.total).toFixed(2));
         this.order.push(target);
+    }
+
+    purchaseOrder(){
+        console.log(this.order)
+        for(let item of this.order){
+
+
+            // let observable = this._httpService.updateProduct(item._id, newobject)
+            // observable.subscribe(data => {
+            //     if(data["results"]){
+            //         this._router.navigate(['/inventory'])
+            //     }
+            //     else if(data["errors"]){
+            //         this.errors = [];
+            //         for(let item in data["errors"]){
+            //             this.errors.push(data["errors"][item]);
+            //         }
+            //     }
+                
+            // });
+
+
+
+
+
+        }
+
+        this.clearOrder();
     }
 
 }
